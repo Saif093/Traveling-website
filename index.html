@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelExplorer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+            <h1>TravelExplorer</h1>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                &#9776; <!-- Hamburger icon -->
+            </button>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#destinations">Destinations</a></li>
+                    <li><a href="index.html#new-plans">New Plans</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Discover Your Next Adventure</h2>
+            <p>Explore beautiful destinations and create unforgettable memories.</p>
+            <a href="#destinations" class="btn-primary">Explore Destinations</a>
+        </div>
+    </section>
+
+    <section id="destinations" class="destination-grid">
+        <h2>Popular Destinations</h2>
+        <div class="destination" id="paris" data-destination="paris">
+            <img src="paris.jpg" alt="Paris" class="destination-img" >
+            <h3>Paris</h3>
+            <p>The city of lights, known for its art, fashion, and cuisine.</p>
+             <a href="paris.html" target="_parent">more</a>
+            <div class="destination-details">
+                <h4>Paris Details</h4>
+                <p>Explore the Louvre Museum, Eiffel Tower, and experience the charming streets of Montmartre. Don't miss the exquisite French cuisine!</p>
+            </div>
+        </div>
+        <div class="destination" id="new-york" data-destination="new-york">
+            <img src="new york.jpg" alt="New York" class="destination-img">
+            <h3>New York</h3>
+            <p>The city that never sleeps, with its iconic skyline and vibrant culture.</p>
+            <a href="new york.html" target="_parent">more</a>
+            <div class="destination-details">
+                <h4>New York Details</h4>
+                <p>Visit Times Square, Central Park, and the Statue of Liberty. Experience Broadway shows and diverse neighborhoods!</p>
+            </div>
+        </div>
+        <div class="destination" id="tokyo" data-destination="tokyo">
+            <img src="tokyo.jpeg" alt="Tokyo" class="destination-img">
+            <h3>Tokyo</h3>
+            <p>A bustling metropolis known for its technology and traditional culture.</p>
+            <a href="tokyo.html" target="_parent">more</a>
+            <div class="destination-details">
+                <h4>Tokyo Details</h4>
+                <p>Explore the temples of Asakusa, the modern shopping district of Shibuya, and enjoy sushi at Tsukiji Market. Don't miss the cherry blossoms in spring!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Section for Plans -->
+   <section id="new-plans">
+    <div class="container">
+        <h2>New Plans</h2>
+        <div class="plan">
+            <h3>Exciting Summer Escapes</h3>
+            <p>Summer is just around the corner! Check out our handpicked summer vacation plans that will help you make the most of the sunny season.</p>
+            <a href="summer-plans.html" class="btn-secondary">Learn More</a>
+        </div>
+        <div class="plan">
+            <h3>Winter Wonderland Trips</h3>
+            <p>Looking to escape the cold or embrace it? Explore our winter wonderland trips and find the perfect getaway for the snowy season.</p>
+            <a href="winter-plans.html" class="btn-secondary">Discover More</a>
+        </div>
+    </div>
+</section>
+
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <a href="https://mail.google.com/mail/u/1/#inbox?compose=CllgCJZcRgCzrQHPnmVvGfMnMnwhbVXPtqvxbSrhZDrBSDVZpqKZkGLfgGmdWFRrhprZGjCkftL" target="_blank" class="contact-link">
+                        <img src="gmail.png" alt="Email Icon" class="contact-icon">
+                        <span>mohdzaman9899@gamil.com</span>
+                    </a>
+                </div>
+                <div class="contact-item">
+                    <a href="https://www.instagram.com/mohd__zaman_/" target="_blank" class="contact-link">
+                        <img src="images.jpeg" alt="Instagram Icon" class="contact-icon">
+                        <span>@mohd__zaman_</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 TravelExplorer. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+             document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+    }
+});</script>
+</body>
+</html>

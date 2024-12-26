@@ -1,0 +1,569 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    background: #f0f0f0;
+    animation: fadeIn 1s ease-in;
+}
+
+header {
+    background: #222;
+    color: #fff;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: slideDown 0.5s ease-in-out;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    animation: fadeIn 1s ease-out;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+    animation: fadeIn 1s ease-out;
+    animation-delay: 0.2s;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00eaff;
+    transform: translateY(-2px);
+}
+/* Navigation Toggle Button */
+/* Hide the menu by default */
+/* Default styles: menu hidden on larger screens */
+/*  */
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Align menu items horizontally */
+}
+
+.nav-menu ul li {
+    margin: 0;
+}
+
+.nav-menu ul li a {
+    display: block;
+    padding: 1rem;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+    background: #333;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('travel.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px;
+    position: relative;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.7);
+    display: inline-block;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-content h2 {
+    margin: 0;
+    font-size: 3rem;
+    line-height: 1.2;
+    animation: fadeIn 1s ease-out;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin: 1rem 0;
+    animation: fadeIn 1s ease-out;
+    animation-delay: 0.5s;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #ff6347, #ff4500);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.3s ease;
+    animation: bounceIn 1s ease-in-out;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #ff4500, #ff6347);
+    transform: translateY(-3px);
+}
+
+/* Destination Grid */
+.destination-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 2rem 1rem;
+    animation: fadeInUp 1s ease-out;
+}
+.destination  a:link, a:visited {
+    background-color: #bb6b49;
+    color: rgb(255, 255, 255);
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+.destination-grid  a:hover, a:active {
+    background-color: rgba(254, 139, 8, 0.791);
+  }
+.destination {
+    background: #fff;
+    border-radius: 12px;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+    max-width: 300px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease-out;
+    animation-delay: 0.2s;
+}
+
+.destination:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.destination-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.destination:hover .destination-img {
+    transform: scale(1.1);
+}
+
+.destination h3 {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.destination p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Destination Details Styles */
+.destination-details {
+    display: none;
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.destination-details h4 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.destination.active .destination-details {
+    display: block;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+/* Hover effect on destinations */
+.destination:hover {
+    cursor: pointer;
+    border-color: #ff6347;
+}
+/* New Plans Section */
+#new-plans {
+    padding: 4rem 1rem;
+    background: #fff;
+    text-align: center;
+}
+
+#new-plans h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.plan {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto 2rem; /* Margin bottom for spacing */
+    padding: 1.5rem;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Indicates that the element is clickable */
+}
+
+.plan:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.plan h3 {
+    font-size: 1.75rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.plan p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #ff6f61, #d43f2b);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(135deg, #d43f2b, #ff6f61);
+    transform: translateY(-2px);
+}
+
+/* Responsive Styles for New Plans Section */
+@media (max-width: 768px) {
+    #new-plans {
+        padding: 2rem 1rem;
+    }
+
+    #new-plans h2 {
+        font-size: 2rem;
+    }
+
+    .plan {
+        margin-bottom: 2rem;
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .plan h3 {
+        font-size: 1.5rem;
+    }
+
+    .plan p {
+        font-size: 0.9rem;
+    }
+
+    .btn-secondary {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Contact Section */
+#contact {
+    padding: 4rem 1rem;
+    background: #fff;
+    text-align: center;
+    animation: fadeInUp 1s ease-out;
+}
+
+#contact h2 {
+    margin-top: 2rem;
+    font-size: 2rem;
+    color: #333;
+}
+.contact-info a:visited{
+    color: rgb(54, 54, 54);
+}
+.contact-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.contact-item {
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #ff6347;
+}
+
+.contact-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in;
+}
+
+/* Alert Styles */
+.alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    z-index: 1000;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+}
+
+.alert.success {
+    background-color: #28a745;
+}
+
+.alert.error {
+    background-color: #dc3545;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    80% {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Styles */
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    header .container {
+        padding: 0 0.5rem;
+    }
+
+    nav ul li {
+        margin: 0 12px;
+    }
+}
+
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .plans {
+        margin-top: 1rem;
+    }
+
+    .destination-detail {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .destination-detail h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .destination-detail h2 {
+        font-size: 1.6rem;
+    }
+
+    .destination-img-detail {
+        max-width: 100%;
+    }
+
+    .btn-primary {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .plans-content {
+        padding: 0.5rem;
+    }
+}
+/* Responsive styles: Show the menu toggle button on smaller screens */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Ensure menu is hidden by default on small screens */
+    }
+
+    .nav-toggle {
+        display: block; /* Show the menu toggle button */
+        cursor: pointer;
+    }
+}
+
+/* Ensure nav-toggle is hidden on larger screens */
+@media (min-width: 769px) {
+    .nav-toggle {
+        display: none; /* Hide the toggle button on larger screens */
+    }
+}

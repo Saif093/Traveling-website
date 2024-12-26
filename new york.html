@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New York - TravelExplorer</title>
+    <link rel="stylesheet" href="paris.css">
+    <style>
+        /* Add basic styles for the plans content */
+        #plans-content {
+            display: none;
+            margin-top: 20px;
+        }
+        .btn-primary {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html">TravelExplorer</a></h1>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                &#9776; <!-- Hamburger icon -->
+            </button>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#destinations">Destinations</a></li>
+                    <li><a href="index.html#new-plans">New Plans</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="destination-detail">
+        <div class="container">
+            <h2>New York</h2>
+            <img src="new york.jpg" alt="New York" class="destination-img-detail">
+            <p>The city that never sleeps, with its iconic skyline and vibrant culture.</p>
+            <h3>Highlights:</h3>
+            <ul>
+                <li>Times Square</li>
+                <li>Central Park</li>
+                <li>Statue of Liberty</li>
+            </ul>
+            <p>Visit Times Square, Central Park, and the Statue of Liberty. Experience Broadway shows and diverse neighborhoods!</p>
+            
+            <!-- Plans Button -->
+            <button id="show-plans-btn" class="btn-primary">See Plans</button>
+            
+            <!-- Plans Content Section -->
+            <div id="plans-content">
+                <h3>Travel Plans</h3>
+                <p>Explore our detailed plans for New York, including itineraries, local tips, and more!</p>
+                <ul>
+                    <li>Day 1: Explore Manhattan</li>
+                    <li>Day 2: Visit Brooklyn</li>
+                    <li>Day 3: Cultural and Historical Sites</li>
+                </ul>
+            </div>
+
+            <a href="index.html" class="btn-primary">Back to Destinations</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 TravelExplorer. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('show-plans-btn').addEventListener('click', function() {
+            const plansContent = document.getElementById('plans-content');
+            const isVisible = plansContent.style.display === 'block';
+            
+            // Toggle display of plansContent
+            plansContent.style.display = isVisible ? 'none' : 'block';
+            
+            // Update button text
+            this.textContent = isVisible ? 'See Plans' : 'Hide Plans';
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+    }
+});
+    </script>
+</body>
+</html>
